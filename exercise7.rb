@@ -17,12 +17,22 @@ students[:cohort4] = 43
 puts students.keys
 
 def more_students(hash, amount_increased)
-	#percentage_increase = amount_increased / 100
-	#puts percentage_increase
 	hash.each do |key,value|
 		new_amount_of_students = value * (1+(amount_increased.to_f/100))
-		hash[key]=new_amount_of_students
+		hash[key]=new_amount_of_students.to_i
 	end
 	students_per_cohort(hash)
 end
 more_students(students, 5)
+
+students.delete(:cohort2)
+
+students_per_cohort(students)
+
+sum=0
+
+students.each do |k,y|
+	sum += y
+end
+
+puts "There are #{sum} students."
