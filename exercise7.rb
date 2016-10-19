@@ -9,4 +9,7 @@ def students_per_cohort(array)
 		puts "#{key}: #{value}"
 	end
 end
+
 students_per_cohort(students)
+
+students[:cohort4] = 43
